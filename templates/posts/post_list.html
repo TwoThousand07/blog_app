@@ -1,0 +1,13 @@
+{% include 'base.html' %}
+
+{% block content %}
+  <h1>HELLO!</h1>
+
+  <div class="container">
+    {% for post in posts %}
+        {{ post.title }}
+    {% endfor %}
+  </div>
+
+    
+{% endblock content %}
