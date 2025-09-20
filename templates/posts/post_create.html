@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+
+{% block title %}
+    Создать пост
+{% endblock title %}
+
+{% block content %}
+    <h2>Создать пост</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Создать</button>
+    </form>
+{% endblock content %}

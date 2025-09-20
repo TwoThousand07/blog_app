@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+
+{% block content %}
+    {{ post.author }}
+    {{ post.title }}
+    {{ post.content }}
+    {{ post.created_at }}
+
+    {% include 'posts/post_update.html' %}
+    <form action="{% url 'post_delete' post.slug %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Удалить</button>
+    </form>
+{% endblock content %}

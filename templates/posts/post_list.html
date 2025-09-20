@@ -5,7 +5,9 @@
 
   <div class="container">
     {% for post in posts %}
-        {{ post.title }}
+        <ul>
+            <li><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></li>
+        </ul>
     {% endfor %}
   </div>
 
